@@ -1,26 +1,29 @@
 //Write a function for fizzBuzz
 
 
-function FizzBuzz(N){
-    //count variable N starting from 1
+function FizzBuzz(n){
+    //count variable i starting from 1
     var string = '';
-    for(var i = 1; i <= N; i++){
+    for(var i = 1; i <= n; i++){
         //For every number that is a multiple of 3 and 5, return 'fizzbuzz'
         if ((i % 3 === 0) && (i % 5 === 0)){
             string += 'fizzbuzz'
         }
-        else if ((i % 3 === 0) && (i % 5 !== 0)){
+        //For every number that is a multiple of 3, return 'fizz'
+        else if (i % 3 === 0){
             string += 'fizz'
         }
-        else if ((i % 5 === 0) && (i % 3 !== 0)){
+        //For every number that is a multiple of 5, return 'buzz'
+        else if (i % 5 === 0){
             string += 'buzz'
         }
+        //For every number that is not a multiple of 3 and 5, return '.'
         else {
             string += '.'
         }
     }
     // console.log(string)
-    return(string)
+    return string
 }
 // FizzBuzz(1)
 // FizzBuzz(2)
