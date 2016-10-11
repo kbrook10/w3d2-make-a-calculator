@@ -13,9 +13,106 @@
   <!-- <link rel="stylesheet" type="text/css" href="css/global.css" /> -->
 </head>
 <body>
-  <div class="container">
-    
-  </div>
-  <script type="text/javascript" src="js/control-flow.js"></script>
+  <form action="">
+    <div class="container">
+      <div class="form-group">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h2 class="text-uppercase text-center">hw calculator</h2>
+          </div>
+          <div class="panel-body">
+            <!-- This section STARTs the Calculation value return window -->
+            <div class="row">
+              <div class="col-sm-12">
+                <input type="text" id="mainCalc" name="mainCalc" class="form-control text-center" placeholder="Calculation Value" disabled/>
+              </div>
+              <!-- This section ENDs the Calculation value return window -->
+            </div>
+            <br>
+            <!-- This section STARTs the Calculation input value window -->
+            <div class="row">
+              <div class="col-sm-6">
+                <input type="number" id="txtInput1" name="txtInput1" class="form-control text-center" placeholder="Enter Value 1"/>
+              </div>
+              <div class="col-sm-6">
+                <input type="number" id="txtInput2" name="txtInput2" class="form-control text-center" placeholder="Enter Value 2"/>
+              </div>
+            </div>
+            <!-- This section ENDs the Calculation input value window -->
+            <br>
+            <!-- This is the START of row 1 logical operator buttons -->
+            <div class="row text-center">
+              <div class="col-sm-4">
+                <button class="btn btn-success btn-md" id="add">
+                  add
+                </button>
+              </div>
+              <div class="col-sm-4">
+                <button class="btn btn-success btn-md" id="subtract">
+                  sub.
+                </button>
+              </div>
+              <div class="col-sm-4">
+                <button class="btn btn-success btn-md" id="divide">
+                  div.
+                </button>
+              </div>
+            </div>
+            <br>
+            <!-- This is the END of row 1 logical operator buttons -->
+            <!-- This is the START of row 2 logical operator buttons -->
+            <div class="row text-center">
+              <div class="col-sm-4">
+                <button class="btn btn-success btn-md" id="multiply">
+                  mul.
+                </button>
+              </div>
+              <div class="col-sm-4">
+                <button class="btn btn-success btn-md" id="remainder">
+                  rem.
+                </button>
+              </div>
+              <div class="col-sm-4">
+                <button class="btn btn-success btn-md" id="increment">
+                  inc.
+                </button>
+              </div>
+            </div>
+            <br>
+            <!-- This is the END of row 2 logical operator buttons -->
+            <!-- This is the START of row 3 logical operator buttons -->
+            <div class="row text-center">
+              <div class="col-sm-4">
+                <button class="btn btn-success btn-md" id="decrement">
+                  dec.
+                </button>
+              </div>
+              <div class="col-sm-8">
+              </div>
+            </div>
+            <br>
+            <div class="row text-center">
+              <div class="col-sm-12">
+                <button class="btn btn-success btn-md text-uppercase" id="clear">
+                  clear
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <script type="text/javascript">
+  //Create function for addition button
+    document.getElementById('add').addEventListener('click', function() {
+    var firstValue = document.getElementById('txtInput1').value
+    var secondValue = document.getElementById('txtInput2').value
+
+    var answer = add(txtInput1, txtInput2)
+
+    document.getElementById('firstValue').value = answer
+    })
+  </script>
 </body>
 </html>
