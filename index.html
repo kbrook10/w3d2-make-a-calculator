@@ -24,7 +24,7 @@
             <!-- This section STARTs the Calculation value return window -->
             <div class="row">
               <div class="col-sm-12">
-                <input type="text" id="mainCalc" name="mainCalc" class="form-control text-center" placeholder="Calculation Value" disabled/>
+                <input type="number" id="mainCalc" name="mainCalc" class="form-control text-center"  readonly />
               </div>
               <!-- This section ENDs the Calculation value return window -->
             </div>
@@ -32,10 +32,10 @@
             <!-- This section STARTs the Calculation input value window -->
             <div class="row">
               <div class="col-sm-6">
-                <input type="number" id="txtInput1" name="txtInput1" class="form-control text-center" placeholder="Enter Value 1"/>
+                <input type="number" id="txtInput1" name="txtInput1" class="form-control text-center" />
               </div>
               <div class="col-sm-6">
-                <input type="number" id="txtInput2" name="txtInput2" class="form-control text-center" placeholder="Enter Value 2"/>
+                <input type="number" id="txtInput2" name="txtInput2" class="form-control text-center" />
               </div>
             </div>
             <!-- This section ENDs the Calculation input value window -->
@@ -43,7 +43,7 @@
             <!-- This is the START of row 1 logical operator buttons -->
             <div class="row text-center">
               <div class="col-sm-4">
-                <button class="btn btn-success btn-md" id="add">
+                <button class="btn btn-success btn-md" id="addition">
                   add
                 </button>
               </div>
@@ -103,16 +103,21 @@
       </div>
     </div>
   </form>
-  <script type="text/javascript">
-  //Create function for addition button
-    document.getElementById('add').addEventListener('click', function() {
-    var firstValue = document.getElementById('txtInput1').value
-    var secondValue = document.getElementById('txtInput2').value
 
-    var answer = add(txtInput1, txtInput2)
+<!-- Testing area here -->
+<!-- Testing area here -->
+<!-- Testing area here -->
+  <script>
+  document.getElementById('add').addEventListener('click', function() {
+     var firstValue = Number(document.getElementById('txtInput1').value)
+     var secondValue = Number(document.getElementById('txtInput2').value)
 
-    document.getElementById('firstValue').value = answer
-    })
+     var answer = add(firstValue, secondValue)
+
+     document.getElementById('firstValue').value = answer
+  })
   </script>
+
+  <script type="text/javascript" src="js/calc.js"></script>
 </body>
 </html>
