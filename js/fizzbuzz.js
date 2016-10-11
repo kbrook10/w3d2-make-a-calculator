@@ -1,28 +1,35 @@
 //Write a function for fizzBuzz
-function fizzBuzz(N){
+
+
+function FizzBuzz(N){
     //count variable N starting from 1
-    for(var N = 1; N <= 15; N++){
-        //For every number that isn't a multiple of 3 or 5, return a period '.'
-        if ((N % 3 !== 0) && (N % 5 !== 0)){
-            var string = console.log('.')
-        }
-        //For every number that is a multiple of 3 (but not 5), return 'fizz'
-        else if ((N % 3 === 0) && (N % 5 !== 0)){
-            var string = console.log('fizz')
-        }
-        //For every number that is a multiple of 5 (but not 3), return 'buzz'
-        else if ((N % 5 === 0) && (N % 3 !== 0)){
-            var string = console.log('buzz')
-        }
+    var string = '';
+    for(var i = 1; i <= N; i++){
         //For every number that is a multiple of 3 and 5, return 'fizzbuzz'
-        else if ((N % 3 === 0) && (N % 5 === 0)){
-            var string = console.log('fizzbuzz')
+        if ((i % 3 === 0) && (i % 5 === 0)){
+            string += 'fizzbuzz'
+        }
+        else if ((i % 3 === 0) && (i % 5 !== 0)){
+            string += 'fizz'
+        }
+        else if ((i % 5 === 0) && (i % 3 !== 0)){
+            string += 'buzz'
         }
         else {
-            var string = console.log('nothing')
+            string += '.'
         }
-        //Add string to repeat all values here
     }
+    // console.log(string)
+    return(string)
 }
-//Call function to count from N to final value
-fizzBuzz()
+// FizzBuzz(1)
+// FizzBuzz(2)
+// FizzBuzz(3)
+// FizzBuzz(5)
+// FizzBuzz(10)
+
+console.assert(FizzBuzz(1) === '.')
+console.assert(FizzBuzz(2) === '..')
+console.assert(FizzBuzz(3) === '..fizz')
+console.assert(FizzBuzz(5) === '..fizz.buzz')
+console.assert(FizzBuzz(10) === '..fizz.buzzfizz..fizzbuzz')
