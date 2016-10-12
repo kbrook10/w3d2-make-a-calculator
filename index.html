@@ -46,13 +46,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-4">
-                            <button type="button" id="add" class="btn"><span class="input-group-addon text-uppercase" id="addIcon">+</span>add</button>
+                            <button type="button" id="add" class="btn text-capitalize"><span class="input-group-addon" id="addIcon">+</span>add</button>
                         </div>
                         <div class="col-sm-4">
-                            <button type="button" id="subtract" class="btn"><span class="input-group-addon text-uppercase" id="subtractIcon">-</span>subtract</button>
+                            <button type="button" id="subtract" class="btn text-capitalize"><span class="input-group-addon" id="subtractIcon">-</span>subtract</button>
                         </div>
                         <div class="col-sm-4">
-                            <button type="button" id="divide" class="btn"><span class="input-group-addon text-uppercase" id="divideIcon">/</span>divide</button>
+                            <button type="button" id="divide" class="btn text-capitalize"><span class="input-group-addon" id="divideIcon">/</span>divide</button>
                         </div>
                     </div>
                 </div>
@@ -62,25 +62,37 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-4">
-                            <button type="button" id="multiply" class="btn"><span class="input-group-addon text-uppercase" id="multiplyIcon">*</span>multiply</button>
+                            <button type="button" id="multiply" class="btn text-capitalize"><span class="input-group-addon" id="multiplyIcon">*</span>multiply</button>
                         </div>
                         <div class="col-sm-4">
-                            <button type="button" id="modulo" class="btn"><span class="input-group-addon text-uppercase" id="moduloIcon">%</span>modulo</button>
+                            <button type="button" id="modulo" class="btn text-capitalize"><span class="input-group-addon" id="moduloIcon">%</span>modulo</button>
                         </div>
                         <div class="col-sm-4">
-                            <button type="button" id="increment" class="btn"><span class="input-group-addon text-uppercase" id="incrementIcon">++</span>increment</button>
+                            <button type="button" id="increment" class="btn text-capitalize"><span class="input-group-addon" id="incrementIcon">++</span>increment</button>
                         </div>
                     </div>
                 </div>
                 <br>
                 <!-- This is the END of row 2 logical operator buttons -->
+                <!-- This is the START of row 3 logical operator buttons -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <button type="button" id ="decrement" class="btn text-capitalize"><span class="input-group-addon" id="decrementIcon">--</span>decrement</button>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" id ="clear" class="btn text-uppercase"><span class="glyphicon glyphicon-sunglasses input-group-addon" aria-hidden="true" id="clearIcon"></span>clear</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- This is the END of row 3 logical operator buttons -->
             </div>
         </div>
     </div>
 
 
 
-<!-- This is the START of row 3 logical operator buttons -->
+
 <!-- Testing area here -->
 <!-- Testing area here -->
 <!-- Testing area here -->
@@ -129,6 +141,26 @@ var secondValue = Number(document.getElementById('txtInput2').value)
 var answer = modulo(firstValue, secondValue)
 
 document.getElementById('mainCalc').value = answer
+})
+//This section is for the increment function
+document.getElementById('increment').addEventListener('click', function() {
+var firstValue = Number(document.getElementById('txtInput1').value)
+
+var answer = increment(firstValue)
+document.getElementById('mainCalc').value = answer
+})
+//This section is for the decrement function
+document.getElementById('decrement').addEventListener('click', function() {
+var firstValue = Number(document.getElementById('txtInput1').value)
+
+var answer = decrement(firstValue)
+document.getElementById('mainCalc').value = answer
+})
+//This section is for the clear function
+document.getElementById('clear').addEventListener('click', function() {
+document.getElementById('txtInput1').value = null
+document.getElementById('txtInput2').value = null
+document.getElementById('mainCalc').value = null
 })
 </script>
 
