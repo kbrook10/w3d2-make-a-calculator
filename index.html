@@ -1,123 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Control Flow</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch"></script>
-  <!-- Stylesheets go here. -->
-  <script src="https://use.fontawesome.com/bfd4e076b7.js"></script>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" type="text/css" href="css/global.css" /> -->
+<title>Control Flow</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch"></script>
+<!-- Stylesheets go here. -->
+<script src="https://use.fontawesome.com/bfd4e076b7.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- <link rel="stylesheet" type="text/css" href="css/global.css" /> -->
 </head>
 <body>
-  <form action="">
-    <div class="container">
-      <div class="form-group">
-        <div class="panel panel-info">
-          <div class="panel-heading">
-            <h2 class="text-uppercase text-center">hw calculator</h2>
-          </div>
-          <div class="panel-body">
-            <!-- This section STARTs the Calculation value return window -->
-            <div class="row">
-              <div class="col-sm-12">
-                <input type="number" id="mainCalc" name="mainCalc" class="form-control text-center"  readonly />
-              </div>
-              <!-- This section ENDs the Calculation value return window -->
-            </div>
-            <br>
-            <!-- This section STARTs the Calculation input value window -->
-            <div class="row">
-              <div class="col-sm-6">
-                <input type="number" id="txtInput1" name="txtInput1" class="form-control text-center" />
-              </div>
-              <div class="col-sm-6">
-                <input type="number" id="txtInput2" name="txtInput2" class="form-control text-center" />
-              </div>
-            </div>
-            <!-- This section ENDs the Calculation input value window -->
-            <br>
-            <!-- This is the START of row 1 logical operator buttons -->
-            <div class="row text-center">
-              <div class="col-sm-4">
-                <button class="btn btn-success btn-md" id="addition">
-                  add
-                </button>
-              </div>
-              <div class="col-sm-4">
-                <button class="btn btn-success btn-md" id="subtract">
-                  sub.
-                </button>
-              </div>
-              <div class="col-sm-4">
-                <button class="btn btn-success btn-md" id="divide">
-                  div.
-                </button>
-              </div>
-            </div>
-            <br>
-            <!-- This is the END of row 1 logical operator buttons -->
-            <!-- This is the START of row 2 logical operator buttons -->
-            <div class="row text-center">
-              <div class="col-sm-4">
-                <button class="btn btn-success btn-md" id="multiply">
-                  mul.
-                </button>
-              </div>
-              <div class="col-sm-4">
-                <button class="btn btn-success btn-md" id="remainder">
-                  rem.
-                </button>
-              </div>
-              <div class="col-sm-4">
-                <button class="btn btn-success btn-md" id="increment">
-                  inc.
-                </button>
-              </div>
-            </div>
-            <br>
-            <!-- This is the END of row 2 logical operator buttons -->
-            <!-- This is the START of row 3 logical operator buttons -->
-            <div class="row text-center">
-              <div class="col-sm-4">
-                <button class="btn btn-success btn-md" id="decrement">
-                  dec.
-                </button>
-              </div>
-              <div class="col-sm-8">
-              </div>
-            </div>
-            <br>
-            <div class="row text-center">
-              <div class="col-sm-12">
-                <button class="btn btn-success btn-md text-uppercase" id="clear">
-                  clear
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </form>
 
+<!-- This section STARTs the Calculation value return window -->
+<!-- <div class="row">
+<div class="col-sm-12">
+<input type="number" id="mainCalc" name="mainCalc" class="form-control text-center"  readonly />
+</div> -->
+<!-- This section ENDs the Calculation value return window -->
+<!-- This section STARTs the Calculation input value window -->
+<!-- This section ENDs the Calculation input value window -->
+<!-- This is the START of row 1 logical operator buttons -->
+<!-- This is the END of row 1 logical operator buttons -->
+<!-- This is the START of row 2 logical operator buttons -->
+<!-- This is the END of row 2 logical operator buttons -->
+<!-- This is the START of row 3 logical operator buttons -->
 <!-- Testing area here -->
 <!-- Testing area here -->
 <!-- Testing area here -->
-  <script>
-  document.getElementById('add').addEventListener('click', function() {
-     var firstValue = Number(document.getElementById('txtInput1').value)
-     var secondValue = Number(document.getElementById('txtInput2').value)
+<script>
+document.getElementById('add').addEventListener('click', function() {
+var firstValue = Number(document.getElementById('txtInput1').value)
+var secondValue = Number(document.getElementById('txtInput2').value)
 
-     var answer = add(firstValue, secondValue)
+var answer = add(firstValue, secondValue)
 
-     document.getElementById('firstValue').value = answer
-  })
-  </script>
+document.getElementById('mainCalc').value = answer
+})
+</script>
 
-  <script type="text/javascript" src="js/calc.js"></script>
+<script type="text/javascript" src="js/calc.js"></script>
 </body>
 </html>

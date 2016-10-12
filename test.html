@@ -12,21 +12,27 @@
 </head>
 <body>
     <div class="calc">
+      <div><input type="number" id="valueReturn" readonly ></div>
+
       <input type="number" id="firstValue">
       <input type="number" id="secondValue">
       <button type="button" id="addButton" class="btn">add</button>
       <button id="subButton" class="btn">-</button>
       <button id="mulButton" class="btn ">*</button>
       <button id="divdButton" class="btn btn-danger">/</button>
+      <button id="moduloButton" class="btn btn-danger">%</button>
+      <button id="clearButton" class="btn btn-primary text-uppercase">clear</button>
   </div>
    <script>
+  // answer = 13 % 2;
+  // document.write(answer);
    document.getElementById('addButton').addEventListener('click', function() {
       var firstValue = Number(document.getElementById('firstValue').value)
       var secondValue = Number(document.getElementById('secondValue').value)
 
       var answer = add(firstValue, secondValue)
 
-      document.getElementById('firstValue').value = answer
+      document.getElementById('valueReturn').value = answer
    })
 
   document.getElementById('subButton').addEventListener('click', function() {
@@ -35,7 +41,7 @@
 
    var answer = subtract(firstValue, secondValue)
 
-   document.getElementById('firstValue').value = answer
+   document.getElementById('valueReturn').value = answer
 })
   document.getElementById('mulButton').addEventListener('click', function() {
    var firstValue = document.getElementById('firstValue').value
@@ -43,7 +49,7 @@
 
    var answer = multiply (firstValue, secondValue)
 
-   document.getElementById('firstValue').value = answer
+   document.getElementById('valueReturn').value = answer
 })
   document.getElementById('divdButton').addEventListener('click', function() {
    var firstValue = document.getElementById('firstValue').value
@@ -51,7 +57,27 @@
 
    var answer = divide (firstValue, secondValue)
 
-   document.getElementById('firstValue').value = answer
+   document.getElementById('valueReturn').value = answer
+})
+  document.getElementById('moduloButton').addEventListener('click', function() {
+   var firstValue = Number(document.getElementById('firstValue').value)
+   var secondValue = Number(document.getElementById('secondValue').value)
+
+   var answer = modulo (firstValue, secondValue)
+
+   document.getElementById('valueReturn').value = answer
+})
+//Testing of the clear function
+document.getElementById('clearButton').addEventListener('click', function() {
+ // var firstValue = document.getElementById('firstValue').value
+ // var secondValue = document.getElementById('secondValue').value
+ //
+ // var answer = divide (firstValue, secondValue)
+
+ document.getElementById('firstValue').value = null
+ document.getElementById('secondValue').value = null
+ document.getElementById('valueReturn').value = null
+
 })
    </script>
   <script type="text/javascript" src="js/calc.js"></script>

@@ -44,21 +44,21 @@ console.assert(answer === 47)
 
 //Write function for remainder logic with name modulo
 function modulo(value1, value2){
-    var answer1 = value1 % value2;
-    console.log(answer1)//Used for testing purpose
-    // return answer1 //Used for the console.assert
+    var answer = value1 % value2;
+    // console.log(answer1)//Used for testing purpose
+    return answer //Used for the console.assert
 }
 //Write function to increment by one function with name increment
 function increment(value1){
-    var answer1 = ++value1;
-    console.log(answer1)//Used for testing purpose
-    // return answer1 //Used for the console.assert
+    var answer = ++value1;
+    // console.log(answer1)//Used for testing purpose
+    return answer //Used for the console.assert
 }
 //Write function to decrement by one function with name decrement
 function decrement(value1){
-    var answer1 = --value1;
-    console.log(answer1)//Used for testing purpose
-    // return answer1 //Used for the console.assert
+    var answer = --value1;
+    // console.log(answer1)//Used for testing purpose
+    return answer //Used for the console.assert
 }
 modulo(9,3) //this should return 0
 increment(10) // this should return 11
