@@ -13,29 +13,120 @@
 <!-- <link rel="stylesheet" type="text/css" href="css/global.css" /> -->
 </head>
 <body>
+    <div class="container">
+        <div class="panel">
+            <div class="panel-heading">
+                <h2 class="text-uppercase text-center">w2d2 hw calculator</h2>
+            </div>
+            <div class="panel-body">
+                <!-- This section STARTs the Calculation value return window -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <input type="number" name="mainCalc" id="mainCalc" placeholder="Calculation Window" class="form-control" readonly />
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- This section ENDs the Calculation value return window -->
+                <!-- This section STARTs the Calculation input value window -->
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-sm-6">
+                            <input type="number" class="form-control" name="txtInput1" id="txtInput1" placeholder="Enter Input1" />
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="number" class="form-control" name="txtInput2" id="txtInput2" placeholder="Enter Input2" />
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- This section ENDs the Calculation input value window -->
+                <!-- This is the START of row 1 logical operator buttons -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <button type="button" id="add" class="btn"><span class="input-group-addon text-uppercase" id="addIcon">+</span>add</button>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" id="subtract" class="btn"><span class="input-group-addon text-uppercase" id="subtractIcon">-</span>subtract</button>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" id="divide" class="btn"><span class="input-group-addon text-uppercase" id="divideIcon">/</span>divide</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- This is the END of row 1 logical operator buttons -->
+                <!-- This is the START of row 2 logical operator buttons -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <button type="button" id="multiply" class="btn"><span class="input-group-addon text-uppercase" id="multiplyIcon">*</span>multiply</button>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" id="modulo" class="btn"><span class="input-group-addon text-uppercase" id="moduloIcon">%</span>modulo</button>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" id="increment" class="btn"><span class="input-group-addon text-uppercase" id="incrementIcon">++</span>increment</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- This is the END of row 2 logical operator buttons -->
+            </div>
+        </div>
+    </div>
 
-<!-- This section STARTs the Calculation value return window -->
-<!-- <div class="row">
-<div class="col-sm-12">
-<input type="number" id="mainCalc" name="mainCalc" class="form-control text-center"  readonly />
-</div> -->
-<!-- This section ENDs the Calculation value return window -->
-<!-- This section STARTs the Calculation input value window -->
-<!-- This section ENDs the Calculation input value window -->
-<!-- This is the START of row 1 logical operator buttons -->
-<!-- This is the END of row 1 logical operator buttons -->
-<!-- This is the START of row 2 logical operator buttons -->
-<!-- This is the END of row 2 logical operator buttons -->
+
+
 <!-- This is the START of row 3 logical operator buttons -->
 <!-- Testing area here -->
 <!-- Testing area here -->
 <!-- Testing area here -->
 <script>
+//This section is for the add function
 document.getElementById('add').addEventListener('click', function() {
 var firstValue = Number(document.getElementById('txtInput1').value)
 var secondValue = Number(document.getElementById('txtInput2').value)
 
 var answer = add(firstValue, secondValue)
+
+document.getElementById('mainCalc').value = answer
+})
+//This section is for the subtract function
+document.getElementById('subtract').addEventListener('click', function() {
+var firstValue = Number(document.getElementById('txtInput1').value)
+var secondValue = Number(document.getElementById('txtInput2').value)
+
+var answer = subtract(firstValue, secondValue)
+
+document.getElementById('mainCalc').value = answer
+})
+//This section is for the divide function
+document.getElementById('divide').addEventListener('click', function() {
+var firstValue = Number(document.getElementById('txtInput1').value)
+var secondValue = Number(document.getElementById('txtInput2').value)
+
+var answer = divide(firstValue, secondValue)
+
+document.getElementById('mainCalc').value = answer
+})
+//This section is for the multiply function
+document.getElementById('multiply').addEventListener('click', function() {
+var firstValue = Number(document.getElementById('txtInput1').value)
+var secondValue = Number(document.getElementById('txtInput2').value)
+
+var answer = multiply(firstValue, secondValue)
+
+document.getElementById('mainCalc').value = answer
+})
+//This section is for the modulo function
+document.getElementById('modulo').addEventListener('click', function() {
+var firstValue = Number(document.getElementById('txtInput1').value)
+var secondValue = Number(document.getElementById('txtInput2').value)
+
+var answer = modulo(firstValue, secondValue)
 
 document.getElementById('mainCalc').value = answer
 })

@@ -60,6 +60,6 @@ function decrement(value1){
     // console.log(answer1)//Used for testing purpose
     return answer //Used for the console.assert
 }
-modulo(9,3) //this should return 0
-increment(10) // this should return 11
-decrement(20) // this should return 19
+modulo(9,3) //this should return 0 and is for testing
+increment(10) // this should return 11 and is for testing
+decrement(20) // this should return 19 and is for testing
